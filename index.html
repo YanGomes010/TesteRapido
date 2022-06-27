@@ -11,12 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8cd7492fbf.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="./script.js"></script>
     <title>Noticiário</title>
     <style>
         @media screen and (max-width:992px) {
             .blogs {
                 display: none;
+            }
+            .navbar-toggler {
+                display: block;
+                position: absolute;
+                top: 2px;
+                right: -205px;
             }
         }
         
@@ -27,11 +33,25 @@
             .NewsH2 {
                 font-size: 25px;
             }
+            .divulgation img {
+                width: 450px;
+                height: 250px;
+            }
+            .navbar-toggler {
+                right: -175px;
+            }
         }
         
         @media screen and (max-width:489px) {
             .NewsH2 {
                 font-size: 18px;
+            }
+            .divulgation img {
+                width: 3500px;
+                height: 200px;
+            }
+            .navbar-toggler {
+                right: -110px;
             }
         }
     </style>
@@ -41,8 +61,30 @@
     <!-- Inicio do site -->
     <div class="container-xxl ">
         <!-- Cabeçalho -->
-        <header class=" d-flex justify-content-center align-items-center ">
-            <a href="./index.html"> <img src="./images/eagroLogo.png" alt=""></a>
+        <header class="d-flex justify-content-center align-items-center ">
+            <a href="./index.html"> <img class="mt-5 mb-5" src="./images/eagroLogo.png" alt=""></a>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jornal Eagro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./blogs/colunasLista.html">Colunistas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
         <!-- Principal -->
         <main class="">
@@ -131,7 +173,7 @@
 
                         <!-- TELA DE DIVULGAÇÂO (APARECE QUANDO CLICAR)-->
                         <div class="divulgation mb-5 mt-5 justify-content-center align-items-center" style="width: 100%; height: 300px;">
-                            <img src="./images/telaDeEspera.jpg" alt="" style="width: 500px; height: 300px;">
+                            <img src="./images/telaDeEspera.jpg" alt="">
                         </div>
 
                         <!-- NOTICIAS MAIS VELHAS -->

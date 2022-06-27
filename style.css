@@ -8,8 +8,14 @@ body {
     background: linear-gradient(0deg, rgba(149, 149, 149, 1) 0%, rgba(222, 222, 222, 1) 33%, rgba(255, 255, 255, 1) 100%);
 }
 
+.navbar-toggler {
+    display: none;
+}
 
-/* HEADER */
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: 0;
+}
 
 header {
     width: 100%;
@@ -91,6 +97,11 @@ p {
 
 .divulgation {
     display: none;
+}
+
+.divulgation img {
+    width: 500px;
+    height: 300px;
 }
 
 
